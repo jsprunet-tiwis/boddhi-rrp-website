@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BODDHI RRP® — Rapid Repair Protocol</title>
 <meta name="description" content="Targeted tissue repair for accelerated return to play. Repair-State Medicine by Boddhi Clinic, Geneva.">
+<link rel="alternate" hreflang="en" href="https://jsprunet-tiwis.github.io/boddhi-rrp-website/">
+<link rel="alternate" hreflang="fr" href="https://jsprunet-tiwis.github.io/boddhi-rrp-website/fr/">
+<link rel="alternate" hreflang="x-default" href="https://jsprunet-tiwis.github.io/boddhi-rrp-website/">
+<script>try{if(localStorage.getItem('rrpLang')==='fr'){location.replace('fr/')}}catch(e){}</script>
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
@@ -24,7 +28,14 @@
       <a href="#services">Services</a>
       <a href="#about">About</a>
     </nav>
-    <a class="btn btn--accent btn--sm" href="#contact">Work With Us</a>
+    <div class="nav__right">
+      <div class="lang-switch" aria-label="Language">
+        <span class="lang-switch__current">EN</span>
+        <span class="lang-switch__sep">|</span>
+        <a href="fr/" hreflang="fr" lang="fr" data-lang-link="fr">FR</a>
+      </div>
+      <a class="btn btn--accent btn--sm" href="#contact">Work With Us</a>
+    </div>
   </div>
 </header>
 
@@ -428,6 +439,7 @@
 <footer class="footer">
   <div class="footer__inner">
     <img class="footer__logo" src="assets/logo-white.png" alt="BODDHI RRP">
+    <a class="footer__lang" href="fr/" hreflang="fr" lang="fr" data-lang-link="fr">Version française</a>
     <span class="footer__copy">© 2026 Boddhi Clinic, Geneva · Repair-State Medicine · All rights reserved</span>
   </div>
 </footer>

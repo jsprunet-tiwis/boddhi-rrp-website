@@ -3,6 +3,11 @@
 // toast; no data is sent anywhere.
 
 (function () {
+  var isFr = (document.documentElement.lang || '').indexOf('fr') === 0;
+  var toastMessage = isFr
+    ? 'Demande envoyée, nous revenons vers vous'
+    : 'Enquiry sent — we’ll be in touch';
+
   let toastEl = null;
   let toastTimer = null;
 
@@ -23,7 +28,15 @@
 
   document.querySelectorAll('[data-enquire]').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      ping('Enquiry sent — we’ll be in touch');
+      ping(toastMessage);
+    });
+  });
+
+  // Remember an explicit language choice; the EN root page redirects to /fr/
+  // only when the visitor previously picked French.
+  document.querySelectorAll('[data-lang-link]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      try { localStorage.setItem('rrpLang', a.getAttribute('data-lang-link')); } catch (e) {}
     });
   });
 })();

@@ -6,7 +6,8 @@ Static implementation of the **BODDHI RRP Website** from the Claude Design proje
 
 ## Structure
 
-- `index.html` — the full one-page site (Nav, Hero, What is RRP®, The Science, Case Studies, Services, About, Work With Us, Footer)
+- `index.html` — the full one-page site in English (Nav, Hero, What is RRP®, The Science, Case Studies, Services, About, Work With Us, Footer)
+- `fr/index.html` — the French version (same structure, translated copy following the brandbook tone)
 - `css/tokens.css` — design tokens transcribed from the design system (colors, type, spacing, radii, shadows, motion)
 - `css/site.css` — page styles, responsive at 1024px (tablet) and 640px (mobile)
 - `js/main.js` — enquiry-button toast (mock, as in the design — no data is sent)
@@ -25,6 +26,10 @@ Any static server, e.g.:
 python3 -m http.server 8000
 # → http://localhost:8000
 ```
+
+## Languages
+
+English is the default at `/`; French lives at `/fr/`. The EN | FR toggle sits in the nav (and a link in the footer). An explicit choice is stored in `localStorage` (`rrpLang`); the root page redirects to `/fr/` when the visitor previously picked French. Both pages carry cross-referencing `hreflang` tags for SEO.
 
 ## Notes
 
